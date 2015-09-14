@@ -1,0 +1,256 @@
+﻿<div id="pg-task" class="pg has-aside">
+
+    <div class="pg-main">
+        <div class="main-hd">
+            <h3>代辦事項</h3>
+        </div>
+        <div class="main-ctn touchScroll">
+            <!--<div class="tl-ctnr tl-today">
+                <div class="tl-row tl-hd">
+                    <div class="tl-td">
+                        <div class="tl-bullet-large">
+                            <div class="tl-bullet-inner">
+                                <h4>4</h4>
+                                <h6>9月</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tl-td"></div>
+                </div>
+                <ul class="tl-feeds">
+                    <li class="tl-feed tl-row">
+                        <div class="tl-td">
+                            <div class="tl-bullet">
+                                <span class="tl-bullet-pic" style="background-image: url(img/profile/Henk.jpg)"></span>
+                            </div>
+                        </div>
+                        <div class="tl-td">
+                            <div class="tl-feed-ctn">
+                                <h4 class="tl-feed-title">D3N000125 (王小傑)</h4>
+                                <div class="tl-feed-meta">
+                                    <span>一天後 結束</span>
+                                </div>
+                                <ul class="steps">
+                                    <li class="step">
+                                        <span class="step-icon">
+                                            <span>
+                                            </span>
+                                        </span>
+                                        <span class="step-label">受理</span>
+                                    </li>
+                                    <li class="step step-current">
+                                        <span class="step-icon"><span></span></span>
+                                        <span class="step-label">查勘</span>
+                                    </li>
+                                    <li class="step">
+                                        <span class="step-icon"><span></span></span>
+                                        <span class="step-label">受理</span>
+                                    </li>
+                                    <li class="step">
+                                        <span class="step-icon"><span></span></span>
+                                        <span class="step-label">裡算</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="tl-feed tl-row">
+                        <div class="tl-td">
+                            <div class="tl-bullet">
+                                <span class="tl-bullet-pic" style="background-image: url(img/profile/James.jpg)"></span>
+                            </div>
+                        </div>
+                        <div class="tl-td">
+                            <div class="tl-feed-ctn">
+                                <h4 class="tl-feed-title">D3N000125 (王小傑)</h4>
+                                <div class="tl-feed-meta">
+                                    <span>一天後 結束</span>
+                                </div>
+                                <ul class="steps">
+                                    <li class="step">
+                                        <span class="step-icon">
+                                            <span>
+                                            </span>
+                                        </span>
+                                        <span class="step-label">受理</span>
+                                    </li>
+                                    <li class="step">
+                                        <span class="step-icon"><span></span></span>
+                                        <span class="step-label">查勘</span>
+                                    </li>
+                                    <li class="step">
+                                        <span class="step-icon"><span></span></span>
+                                        <span class="step-label">受理</span>
+                                    </li>
+                                    <li class="step step-current">
+                                        <span class="step-icon"><span></span></span>
+                                        <span class="step-label">裡算</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="tl-feed tl-row">
+                        <div class="tl-td">
+                            <div class="tl-bullet">
+                                <span class="tl-bullet-pic" style="background-image: url(img/profile/Wayne.jpg)"></span>
+                            </div>
+                        </div>
+                        <div class="tl-td">
+                            <div class="tl-feed-ctn">
+                                <h4 class="tl-feed-title">D3N000125 (王小傑)</h4>
+                                <div class="tl-feed-meta">
+                                    <span>一天後 結束</span>
+                                </div>
+                                <ul class="steps">
+                                    <li class="step">
+                                        <span class="step-icon">
+                                            <span>
+                                            </span>
+                                        </span>
+                                        <span class="step-label">受理</span>
+                                    </li>
+                                    <li class="step">
+                                        <span class="step-icon"><span></span></span>
+                                        <span class="step-label">查勘</span>
+                                    </li>
+                                    <li class="step step-current">
+                                        <span class="step-icon"><span></span></span>
+                                        <span class="step-label">受理</span>
+                                    </li>
+                                    <li class="step">
+                                        <span class="step-icon"><span></span></span>
+                                        <span class="step-label">裡算</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>-->
+        </div>
+    </div>
+    <div class="pg-aside large">
+        <div class="aside-hd">
+
+        </div>
+        <div class="aside-ctn">
+            <div class="cal-mini">
+                <div class="cal-title">
+                    <h4>2014 九月</h4>
+                </div>
+                <div class="cal-hd table">
+                    <div class="cal-d"><span>日</span></div>
+                    <div class="cal-d"><span>一</span></div>
+                    <div class="cal-d"><span>二</span></div>
+                    <div class="cal-d"><span>三</span></div>
+                    <div class="cal-d"><span>四</span></div>
+                    <div class="cal-d"><span>五</span></div>
+                    <div class="cal-d"><span>六</span></div>
+                </div>
+                <hr />
+                <div class="cal-days table">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cal-mini").cal();
+
+    var task = {
+        refresh: function (s, e) {
+            dbobj.select(dbobj.qryStr.selectTask(s, e), [], function (r) {
+                console.log(r);
+
+                $("#pg-task .main-ctn").empty().append(task.parseDOM(r))
+                                       .animate({ scrollTop: task.getDateOffset(s.toString("yyyyMMdd")) }, 200);
+            });
+        },
+        parseDOM: function (ts) {
+            var tmp = {};
+            $.each(ts, function (i, v) {
+                //console.log(v);
+                if (typeof (tmp[v.startDate]) == "undefined") {
+                    tmp[v.startDate] = [v]
+                } else {
+                    tmp[v.startDate][tmp[v.startDate].length] = v;
+                }
+            });
+
+            console.log(tmp);
+
+            var tl = $("<div>");
+            $.each(tmp, function (date) {
+                var startDate = Date.parseExact(date, "yyyyMMdd");
+
+                var day = $('<div class="tl-ctnr" date="' + date + '">').append($('<div class="tl-row tl-hd" >').append('<div class="tl-td"><div class="tl-bullet-large"><div class="tl-bullet-inner"><h4>' + startDate.getDate() + '</h4><h6>' + (startDate.getMonth() + 1) + '月</h6>').append('<div class="tl-td">'));
+
+                var feeds = $.map(this, function (v, i) {
+                    return $('<li>').attr("class", "tl-feed tl-row")
+                                        .append($('<div class="tl-td"><div class="tl-bullet"><span class="tl-bullet-pic" style="background-image: url(img/profile/' + v.source + '.jpg)"></span></div></div>'))
+                                        .append($('<div class="tl-td">').append(task.getFeedDOM(v)));
+                });
+
+                if (date == Date.today().toString("yyyyMMdd")) {
+                    day.addClass("tl-today");
+                }
+
+                tl.append(day.append($('<ul class="tl-feeds">').append(feeds)));
+            });
+
+            return tl.children();
+        },
+        getFeedDOM: function (t) {
+            //console.log(t);
+            var feed = $('<div class="tl-feed-ctn" claimNo="' + t.claimNo + '">').click(function () { view.page.toNext("claim", function () { loadPolicy(t.claimNo) });});
+
+            feed.append($('<h4 class="tl-feed-title">' + t.claimNo + ' (' + t.claimant + ')</h4>'))
+                .append($('<div class="tl-feed-meta"><span>' + util.date.toDateString(t.endDate) + ' 結束</span></div>'))
+                .append($('<ul class="steps">').append(task.getStepsDOM(t.step)));
+
+            return feed;
+        },
+        getStepsDOM: function (s) {
+            return $.map(msg.claimSteps, function (v, i) {
+                var step = $('<li class="step">').append($('<span class="step-icon"><span></span></span>'))
+                                                              .append($('<span class="step-label">').html(v));
+                if (s == i)
+                    return step.addClass("step-current");
+                else
+                    return step;
+            });
+        },
+        getDateOffset: function (d) {
+            var offset = 0;
+            $.each($(".tl-ctnr"), function (i) {
+                var t = $(this).attr("date");
+                offset += (t < d) ? $(this).outerHeight() : 0;
+            });
+            console.log()
+            return offset;
+        },
+        scrollToDate: function (d) {
+            $("#pg-task .main-ctn").animate({ scrollTop: task.getDateOffset(d) }, 200);
+        }
+    }
+
+    $(".cal-mini").on("click", ".cal-d", function () {
+        var dStr = $(this).attr("date");
+
+        if ($(this).hasClass("cal-d-gray")) {
+            var startDate = Date.parseExact(dStr.substring(0, 6), "yyyyMM").toString("yyyyMMdd"),
+                endDate = Date.parseExact(dStr.substring(0, 6), "yyyyMM").add(1).months().toString("yyyyMMdd");
+
+            task.refresh(startDate, endDate);
+        } else {
+            task.scrollToDate(dStr);
+        }
+    });
+
+    var s = Date.parseExact(Date.today().toString("yyyyMM"), "yyyyMM").toString("yyyyMMdd"),
+        e = Date.parseExact(Date.today().add(1).months().toString("yyyyMM"), "yyyyMM").toString("yyyyMMdd");
+
+    task.refresh(s, e);
+</script>

@@ -1,0 +1,1241 @@
+/* @group calendar */
+
+/* @group caSelector */
+
+.caSelector {
+    text-align: center;
+    line-height: 30px;
+    margin: 0px 15px;
+    margin-top: 15px;
+}
+
+    .caSelector > .caSwitcher {
+        position: absolute;
+        vertical-align: top;
+        line-height: 32px;
+    }
+
+        .caSelector > .caSwitcher > .btn_caSwitcher {
+            display: inline-block;
+            height: 32px;
+            font-size: 19px;
+            font-weight: bold;
+            color: #78664B;
+            opacity: 0.85;
+            background-repeat: no-repeat;
+            background-size: 60%;
+            cursor: pointer;
+        }
+
+            .caSelector > .caSwitcher > .btn_caSwitcher:first-child,
+            .caSelector > .caSwitcher > .btn_caSwitcher:last-child {
+                width: 32px;
+                height: 32px;
+                opacity: 0.55;
+            }
+
+
+            .caSelector > .caSwitcher > .btn_caSwitcher:active {
+                opacity: 1;
+            }
+
+
+            .caSelector > .caSwitcher > .btn_caSwitcher:first-child {
+                background-image: url(../images/icons/caSwitcher_left.png);
+                background-position: right;
+            }
+
+            .caSelector > .caSwitcher > .btn_caSwitcher:last-child {
+                background-image: url(../images/icons/caSwitcher_right.png);
+                background-position: left;
+            }
+
+    .caSelector > .date {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        margin-top: 20px;
+        margin-right: 15px;
+        line-height: 32px;
+        font-size: 28px;
+        font-weight: 100;
+        color: #78664B;
+    }
+
+/*
+.caSelector > input {
+	display: none;
+}
+
+.caSelector > input + label  {
+	display: inline-block;
+	width: 62px;
+	height: 32px;
+	
+	color: #000000;
+	font-weight: bold;
+	font-size: 14px;
+	text-shadow: 0 -1px 0 rgba(255,255,255,0.5);
+	
+	border: 1px solid #d0c8bb;
+	border-right: none;
+	background: #ffffff;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ffffff), color-stop(1, #f3f3f3));
+	background: -webkit-linear-gradient(top, #ffffff 0%, #f3f3f3 100%);
+	background: -moz-linear-gradient( top, #ffffff 0%, #f3f3f3 100%);
+	background: -o-linear-gradient( top, #ffffff 0%, #f3f3f3 100%);
+	background: -ms-linear-gradient( top, #ffffff 0%, #f3f3f3 100%);
+	background: linear-gradient( to bottom, #ffffff 0%, #f3f3f3 100%);
+	
+}
+
+.caSelector > input:checked + label {
+	color: #ffffff !important;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.5) !important;
+
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.95, #656565), color-stop(0, #272727));
+	background: -webkit-linear-gradient(bottom, #272727 0%, #656565 95%);
+	background: -moz-linear-gradient( bottom, #272727 0%, #656565 95%);
+	background: -o-linear-gradient( bottom, #272727 0%, #656565 95%);
+	background: -ms-linear-gradient( bottom, #272727 0%, #656565 95%);
+	background: linear-gradient( to top, #272727 0%, #656565 95%);
+}
+
+.caSelector > input + label:first-of-type  {
+	-moz-border-radius-topleft: 7px !important;
+	-webkit-border-top-left-radius: 7px !important;
+	border-top-left-radius: 7px !important;
+	-moz-border-radius-bottomleft: 7px !important;
+	-webkit-border-bottom-left-radius: 7px !important;
+	border-bottom-left-radius: 7px !important;
+}
+
+.caSelector > input + label:last-of-type  {
+	border-right: 1px solid #d0c8bb;
+	-moz-border-radius-topright: 7px !important;
+	-webkit-border-top-right-radius: 7px !important;
+	border-top-right-radius: 7px !important;
+	-moz-border-radius-bottomright: 7px !important;
+	-webkit-border-bottom-right-radius: 7px !important;
+	border-bottom-right-radius: 7px !important;
+}*/
+
+/* @end */
+
+/* @group caContent */
+
+#caContent,
+#caContent > .caContent_d,
+#caContent > .caContent_d > div,
+#caContent > .caContent_w,
+#caContent > .caContent_m {
+    height: 100%;
+}
+
+/* @group caContent_d */
+
+.caContent_d > div {
+    display: inline-block;
+}
+
+.caContent_d > .left_container {
+    width: 40%;
+}
+
+.caContent_d > .right_container {
+    width: 60%;
+    position: absolute;
+}
+
+.allDay_event {
+    color: rgba(77, 77, 77, 1);
+    background-color: rgba(125, 184, 223, 0.3);
+    font-size: 14px;
+    font-weight: 100;
+    margin-bottom: 1px;
+    padding: 2px 6px;
+    border-radius: 2px;
+}
+
+.event {
+}
+
+/* @group left container */
+
+.caContent_d > .left_container > div {
+    display: table;
+    width: 100%;
+}
+
+
+    .caContent_d > .left_container > div > div {
+        display: table-row;
+        text-align: center;
+    }
+
+.caContent_d > .left_container .day_top {
+    width: 100%;
+    color: #78664b;
+    font-weight: 100;
+    height: 180px;
+}
+
+    .caContent_d > .left_container .day_top > .today {
+        font-size: 150px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 25px;
+        text-align: left;
+    }
+
+    .caContent_d > .left_container .day_top > .date {
+        font-size: 30px;
+        margin-left: 25px;
+        text-align: left;
+    }
+
+    .caContent_d > .left_container .day_top > .day {
+    }
+
+.caContent_d > .left_container .day_calendar {
+}
+
+table.mini_calendar {
+    /*background-color: #fff;*/
+    margin: 70px auto;
+}
+
+    table.mini_calendar > thead > tr {
+        /*border-bottom: 2px solid #d8d8d8;*/
+    }
+
+        table.mini_calendar > thead > tr > th {
+            width: 55px;
+            height: 35px;
+            font-weight: 100;
+            color: #78664b;
+        }
+
+    /*table.mini_calendar > tbody > tr > td:first-child, 
+table.mini_calendar > tbody > tr > td:last-child 
+{
+	background-color: #F5F5F5;
+}*/
+
+    table.mini_calendar > tbody > tr > td {
+        height: 45px;
+        font-weight: 100;
+        color: #78664b;
+    }
+
+
+    table.mini_calendar .day {
+        display: block;
+        width: 33px;
+        height: 33px;
+        margin: auto;
+        line-height: 35px;
+        border-radius: 24px;
+        cursor: pointer;
+        text-align: center;
+    }
+
+        table.mini_calendar .day.grayout {
+            color: #BDA88B;
+        }
+
+        table.mini_calendar .day:active {
+            color: #fff !important;
+            background-color: #BDA88B !important;
+            border: none !important;
+            border-radius: 24px !important;
+            width: 33px !important;
+        }
+
+        table.mini_calendar .day.today {
+            color: #78664b;
+            border-radius: 0px;
+            border-bottom: 2px solid #6AC7A1;
+            width: 20px;
+        }
+
+        table.mini_calendar .day.active {
+            color: #fff;
+            background-color: #BDA88B;
+        }
+
+            table.mini_calendar .day.active.today {
+                color: #fff;
+                background-color: #6AC7A1;
+                border-radius: 24px !important;
+                width: 33px !important;
+            }
+
+/* @end */
+
+/* @group right container */
+
+.caContent_d > .right_container > .event_canvas {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 50px;
+    left: 0px;
+    background-color: #fff;
+    margin: 15px;
+    border-radius: 10px;
+    margin-left: 0;
+}
+
+    .caContent_d > .right_container > .event_canvas > .allDay_events,
+    .weekContainer > .allDay_events {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        height: 75px;
+        margin: 10px;
+        margin-bottom: 0px;
+    }
+
+    .caContent_d > .right_container > .event_canvas .allDay_events > table {
+        width: 100%;
+        color: #8a8a8a;
+    }
+
+        .caContent_d > .right_container > .event_canvas .allDay_events > table tr > td {
+            height: 50px;
+        }
+
+            .caContent_d > .right_container > .event_canvas .allDay_events > table tr > td:first-child {
+                width: 60px;
+                text-align: center;
+            }
+
+            .caContent_d > .right_container > .event_canvas .allDay_events > table tr > td:last-child {
+                border-bottom: 2px solid #d8d8d8;
+            }
+
+                .caContent_d > .right_container > .event_canvas .allDay_events > table tr > td:last-child > ul {
+                    height: 70px;
+                    overflow: scroll;
+                    -webkit-overflow-scrolling: touch;
+                    margin-bottom: 3px;
+                }
+
+                    .caContent_d > .right_container > .event_canvas .allDay_events > table tr > td:last-child > ul > .allDay_event {
+                    }
+
+                    .caContent_d > .right_container > .event_canvas .allDay_events > table tr > td:last-child > ul > li:last-child {
+                    }
+
+    .caContent_d > .right_container > .event_canvas > .tb_events {
+        top: 85px;
+    }
+
+        .caContent_d > .right_container > .event_canvas > .tb_events ul {
+            position: absolute;
+            display: table;
+            width: 100%;
+        }
+
+            .caContent_d > .right_container > .event_canvas > .tb_events ul > li {
+                display: table-row;
+            }
+
+                .caContent_d > .right_container > .event_canvas > .tb_events ul > li > * {
+                    display: table-cell;
+                    height: 44px;
+                }
+
+                .caContent_d > .right_container > .event_canvas > .tb_events ul > li > label {
+                    width: 60px;
+                    text-align: right;
+                    vertical-align: top;
+                    padding-right: 10px;
+                    color: #8a8a8a;
+                    font-weight: 100;
+                    font-size: 14px;
+                    position: relative;
+                    top: -8px;
+                }
+
+                .caContent_d > .right_container > .event_canvas > .tb_events ul > li > div {
+                    border-bottom: 1px solid #e8e8e8;
+                    vertical-align: top;
+                    display: -webkit-box;
+                }
+
+                    .caContent_d > .right_container > .event_canvas > .tb_events ul > li > div > span,
+                    .weekCalendar > .tb_events > ul > li > .time_separator > .hour > span {
+                        display: block;
+                        height: 50%;
+                        width: 100%;
+                        border-bottom: 1px dashed #d8d8d8;
+                    }
+
+/* @end */
+
+/* @end */
+
+/* @group caContent_w */
+
+.caContent_w {
+}
+
+    .caContent_w > .weekContainer,
+    .caContent_m > .monthContainer {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        top: 47px;
+        margin: 15px;
+        color: #4B4B4B;
+        font-weight: 100;
+        height: initial !important;
+    }
+
+        .caContent_w > .weekContainer > .weekCalendar,
+        .caContent_m > .monthContainer > .monthCalendar {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            left: 0px;
+            bottom: 0px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+
+.weekCalendar > .allDay_events > table {
+    width: 100%;
+    font-weight: 100;
+    table-layout: fixed;
+}
+
+    .weekCalendar > .allDay_events > table > caption,
+    .caContent_m table > caption {
+        line-height: 35px;
+        height: 35px;
+        font-size: 23px;
+        color: #8d8d8d;
+    }
+
+        .weekCalendar > .allDay_events > table > caption > .weekSelector,
+        .caContent_m table > caption > .weekSelector {
+            float: left;
+            font-size: 14px;
+            margin-left: 60px;
+        }
+
+        .weekCalendar > .allDay_events > table > caption > .date,
+        .caContent_m table > caption > .date {
+            float: right;
+        }
+
+    .weekCalendar > .allDay_events > table > thead th {
+    }
+
+        .weekCalendar > .allDay_events > table > thead th > p {
+            line-height: 20px;
+            height: 21px;
+            border-bottom: 1px solid #d8d8d8;
+            font-size: 14px;
+            color: #adadad;
+            font-weight: 100;
+            /*margin: 0px 5px;*/
+        }
+
+        .weekCalendar > .allDay_events > table > thead th:nth-child(2) > p {
+            /*margin-left: 0px;*/
+            /*margin: 0px;*/
+        }
+
+
+        .weekCalendar > .allDay_events > table > thead th:last-child > p {
+            /*margin-right: 0px;*/
+            /*margin: 0px;*/
+        }
+
+        .weekCalendar > .allDay_events > table > thead th:first-child {
+            width: 60px;
+        }
+
+.allDay_events > .tb_events > ul {
+    height: 58px;
+}
+
+    .allDay_events > .tb_events > ul > li > label {
+        position: inherit;
+        vertical-align: middle;
+    }
+
+    .allDay_events > .tb_events > ul > li .time_separator {
+        vertical-align: top;
+    }
+
+        .allDay_events > .tb_events > ul > li .time_separator .allDay_event {
+            margin-top: 1px;
+        }
+
+
+.allDay_events > hr {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: 0px;
+    height: 2px;
+    border: 0;
+    background-color: #d8d8d8;
+    margin-left: 60px;
+}
+
+
+.weekCalendar > .tb_events {
+}
+
+.weekCalendar > .allDay_events {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 81px;
+    margin: 10px;
+    margin-bottom: 0px;
+}
+
+.allDay_events .tb_event .horizontal_line > table {
+    height: 100%;
+}
+
+    .allDay_events .tb_event .horizontal_line > table td {
+        border: none;
+    }
+
+.tb_events > .horizontal_line,
+.tb_events .vertical_line,
+.weekCalendar .vertical_line {
+    position: absolute;
+}
+
+.tb_events .vertical_line {
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+}
+
+    .tb_events > .horizontal_line > table,
+    .tb_events .vertical_line > table,
+    /*.weekCalendar > .vertical_line > table*/
+    .tb_events + .vertical_line > table {
+        table-layout: fixed;
+        width: 100%;
+    }
+
+.vertical_line > table {
+    height: 100%;
+}
+
+.tb_events > .horizontal_line > table td {
+    height: 44px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+    .tb_events > .horizontal_line > table td:first-child,
+    .tb_events .vertical_line > table td:first-child,
+    /*.weekCalendar > .vertical_line > table td:first-child*/
+    .tb_events + .vertical_line > table td:first-child {
+        width: 60px;
+        text-align: right;
+        border: none;
+        padding-right: 5px;
+    }
+
+        .tb_events > .horizontal_line > table td:first-child > label {
+            position: relative;
+            top: -22px;
+            right: 5px;
+            font-size: 14px;
+            color: #8d8d8d;
+        }
+
+
+    .tb_events > .horizontal_line > table td > hr {
+        border: none;
+        border-top: 1px dotted #e4e4e4;
+    }
+
+/*.weekCalendar > .vertical_line > table td:nth-child(2),
+.weekCalendar > .vertical_line > table td:last-child*/
+.tb_events + .vertical_line > table td:nth-child(2),
+.tb_events + .vertical_line > table td:last-child {
+    background-color: #f8f8f8;
+}
+
+.tb_events + .vertical_line > table td.today {
+    background-color: #FFF7F7 !important;
+}
+
+.tb_events > .horizontal_line > table td,
+.tb_events .vertical_line > table td {
+}
+
+    .tb_events .vertical_line > table td > div {
+        height: 100%;
+        padding: 0px;
+        border-right: 5px solid #fff;
+        border-left: 5px solid #fff;
+    }
+
+    .tb_events .vertical_line > table td.today > div {
+        border-right: 5px solid #FFF7F7 !important;
+        border-left: 5px solid #FFF7F7 !important;
+    }
+
+    .tb_events .vertical_line > table td:nth-child(2) > div,
+    .tb_events .vertical_line > table td:last-child > div {
+        border-right: 5px solid #f8f8f8;
+        border-left: 5px solid #f8f8f8;
+    }
+
+.weekCalendar > .tb_events > ul > li > .time_separator .hour {
+    height: 100%;
+    display: block;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.weekCalendar > .tb_events > ul > li > .time_separator,
+.tb_events > ul > li > .time_separator {
+    padding: 0px 5px;
+}
+/*
+.weekCalendar > .tb_events > ul > li > .time_separator:first-of-type,
+.tb_events > ul > li > .time_separator:first-of-type {
+	/*padding-left: 0px;*!/
+	background-color: #f8f8f8;
+}
+
+.weekCalendar > .tb_events > ul > li > .time_separator:last-of-type,
+.tb_events > ul > li > .time_separator:last-of-type {
+	/*padding-right: 0px;*!/
+	background-color: #f8f8f8;
+}*/
+
+
+/* @group tb_events */
+
+.tb_events,
+.weekCalendar > .vertical_line {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 91px;
+    bottom: 0px;
+    overflow: scroll;
+    margin: 0px 10px;
+    margin-bottom: 10px;
+}
+
+.tb_events {
+    z-index: 100;
+}
+
+    .tb_events + .vertical_line {
+        z-index: 0;
+    }
+
+
+    .tb_events > ul {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+    }
+
+        .tb_events > ul > li {
+            display: table-row;
+        }
+
+            .tb_events > ul > li > * {
+                display: table-cell;
+                height: 44px;
+            }
+
+            .tb_events > ul > li > label {
+                width: 60px;
+                text-align: right;
+                padding-right: 10px;
+                vertical-align: top;
+                position: relative;
+                top: -9px;
+                font-size: 14px;
+            }
+
+
+    .tb_events .events {
+        position: absolute;
+        left: 60px;
+        top: 0px;
+        right: 0px;
+    }
+
+        .tb_events .events > .event {
+            position: absolute;
+            padding: 3px;
+            background-color: rgba(197, 225, 243, 1);
+            border:1px solid #fff;
+            border-radius: 5px;
+            color: rgba(77, 77, 77, 1);
+            width: 100%;
+            font-weight: 100;
+        }
+         
+        .tb_events .events > .event > h4 {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+            .tb_events .events > .event.active,
+            .allDay_events .allDay_event.active {
+                background-color: rgba(125, 184, 223, 1);
+                color: #fff;
+                z-index: 500 !important;
+            }
+
+            .tb_events .events > .event > h3 {
+                margin-bottom: 5px;
+                font-weight: 300;
+            }
+
+            .tb_events .events > .event > p {                
+	            line-height: 18px;
+	            font-size: 14px;
+            }
+
+.event > .detail_dialog,
+.monthEventDialogs > .detail_dialog,
+.allDayEventDialogs > .detail_dialog {
+    position: absolute;
+    padding: 10px;
+    width: 200px;
+    z-index: 200;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 3px 11px 0px #757575;
+    -wekkit-box-shadow: 0px 3px 11px 0px #757575;
+    color: #575757;
+    pointer-events: none;
+    visibility: hidden;
+    /*display: none;*/
+    animation-duration: 0.3s;
+    -webkit-animation-duration: 0.3s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+}
+
+    .event.active > .detail_dialog,
+    .monthEventDialogs > .detail_dialog.active,
+    .allDayEventDialogs > .detail_dialog.active {
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+.detail_dialog > .substance {
+    color: rgba(71, 133, 173, 1);
+    font-size: 17px;
+    font-weight: 100;
+    margin-bottom: 5px;
+}
+
+.detail_dialog > .place,
+.detail_dialog > .startTime,
+.detail_dialog > .endTime,
+.detail_dialog > .date,
+.detail_dialog > .statement {
+    font-size: 13px;
+    color: #3a3a3a;
+    margin-bottom: 3px;
+}
+
+    .detail_dialog > .place + hr,
+    .detail_dialog > .endTime + hr,
+    .detail_dialog > .date + hr {
+        border: none;
+        border-top: 1px #C7C7C7;
+        margin: 7px 0px;
+    }
+
+    .detail_dialog > .place + hr {
+        border-top-style: solid;
+    }
+
+    .detail_dialog > .startTime:before,
+    .detail_dialog > .endTime:before {
+        font-size: 10px;
+        vertical-align: top;
+        line-height: 14px;
+        margin-right: 4px;
+    }
+
+    .detail_dialog > .startTime:before {
+        content: '從';
+    }
+
+    .detail_dialog > .endTime:before {
+        content: '至';
+    }
+
+    .detail_dialog > .endTime + hr,
+    .detail_dialog > .date + hr {
+        border-top-style: dotted;
+    }
+
+.detail_dialog > .statement {
+}
+
+.detail_dialog_bounceIn {
+    animation-name: detail_dialog_bounceIn;
+    -webkit-animation-name: detail_dialog_bounceIn;
+}
+
+.detail_dialog_bounceOut {
+    animation-name: detail_dialog_bounceOut;
+    -webkit-animation-name: detail_dialog_bounceOut;
+}
+
+.detail_dialog_fadeOut {
+    -webkit-animation-name: detail_dialog_fadeOut;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes detail_dialog_fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes detail_dialog_bounceIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(.3);
+        -ms-transform: scale(.3);
+        transform: scale(.3);
+    }
+
+    50% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+    }
+
+    70% {
+        -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        transform: scale(1.05);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes detail_dialog_bounceOut {
+    0% {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        visibility: visible;
+    }
+
+    50% {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    70% {
+        -webkit-transform: scale(.9);
+        -ms-transform: scale(.9);
+        transform: scale(.9);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    99% {
+        -webkit-transform: scale(.3);
+        -ms-transform: scale(.3);
+        transform: scale(.3);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.event > .detail_dialog.top {
+    top: 0px;
+}
+
+.event > .detail_dialog.bottom {
+    top: 0px;
+    /*bottom: 0px;*/
+}
+
+.event > .detail_dialog.left {
+    right: 105%;
+}
+
+.event > .detail_dialog.right {
+    left: 95%;
+}
+
+.caContent_d .detail_dialog.first_event {
+    right: 10px;
+    left: initial;
+}
+
+.caContent_d .detail_dialog.bottom.right {
+    right: 10px;
+    left: inherit;
+}
+
+.event > .detail_dialog > .arrow,
+.monthEventDialogs > .detail_dialog > .arrow,
+.allDayEventDialogs > .detail_dialog > .arrow {
+    position: absolute;
+    display: block;
+    border: 12px solid transparent;
+}
+/*.event > .detail_dialog.top > .arrow {
+	top: 15px;	
+}*/
+/*.event > .detail_dialog.bottom > .arrow {
+	bottom: 15px;
+}*/
+.event > .detail_dialog.right > .arrow,
+.monthEventDialogs > .detail_dialog.right > .arrow,
+.allDayEventDialogs > .detail_dialog.right > .arrow {
+    left: -25px;
+    border-right: 15px solid #fff;
+}
+
+.event > .detail_dialog.left > .arrow,
+.monthEventDialogs > .detail_dialog.left > .arrow,
+.allDayEventDialogs > .detail_dialog.left > .arrow {
+    right: -25px;
+    border-left: 15px solid #fff;
+}
+
+.allDay_events > .tb_events,
+.allDay_events > .vertical_line {
+    position: absolute;
+    margin: 0px;
+    height: 58px;
+    top: 21px;
+}
+/* @end */
+
+/* @end */
+
+/* @group caContent_m */
+
+.caContent_m {
+}
+
+    .caContent_m > .monthContainer {
+    }
+
+.monthCalendar > table {
+    width: 100%;
+    height: 100%;
+    table-layout: fixed;
+    /*	border-collapse: separate;
+	border-spacing: 5px 0px;*/
+}
+
+    .monthCalendar > table > thead th {
+    }
+
+        .monthCalendar > table > thead th:first-child > p,
+        .monthCalendar > table > thead th:last-child > p {
+            margin: 0px;
+        }
+
+        .monthCalendar > table > thead th > p {
+            margin: 0px 5px;
+            text-align: right;
+            font-size: 14px;
+            color: #adadad;
+            font-weight: 100;
+            line-height: 15px;
+        }
+
+    .monthCalendar > table > tbody td {
+        vertical-align: top;
+    }
+
+        .monthCalendar > table > tbody td:first-child,
+        .monthCalendar > table > tbody td:last-child {
+            background-color: #f8f8f8;
+        }
+
+
+            .monthCalendar > table > tbody td:first-child > .day,
+            .monthCalendar > table > tbody td:last-child > .day {
+                margin: 0px;
+            }
+
+        .monthCalendar > table > tbody td > .day {
+            margin: 0px 3px;
+            border-top: 1px solid #d8d8d8;
+            height: 100%;
+            position: relative;
+        }
+
+            .monthCalendar > table > tbody td > .day > * {
+                position: absolute;
+            }
+
+            .monthCalendar > table > tbody td > .day > .day_label {
+                right: 0px;
+                top: 0px;
+                font-size: 14px;
+            }
+
+        .monthCalendar > table > tbody td.grayout > .day > .day_label {
+            color: #adadad;
+        }
+
+
+    .monthCalendar > table > tbody > tr.currentWeek td {
+        border-top: 3px solid #F7CBCB;
+    }
+
+        .monthCalendar > table > tbody > tr.currentWeek td.today {
+            background-color: rgba(247, 203, 203, 0.2);
+            border-top: 3px solid #F09B9B;
+        }
+
+            .monthCalendar > table > tbody > tr.currentWeek td.today > .day > .day_label {
+                color: #D16666;
+            }
+
+        .monthCalendar > table > tbody > tr.currentWeek td > .day {
+            border-top: none;
+        }
+
+    .monthCalendar > table > tbody td > .day > ul {
+        top: 16px;
+        right: 0px;
+        left: 0px;
+        bottom: 0px;
+    }
+
+        .monthCalendar > table > tbody td > .day > ul .event {
+        }
+
+.monthEventDialogs,
+.allDayEventDialogs {
+    position: absolute;
+    pointer-events: none;
+}
+
+.allDayEventDialogs {
+    height: 58px;
+    top: 21px;
+    left: 60px;
+    right: 0px;
+}
+
+.caContent_m .event {
+    font-size: 14px;
+    padding: 3px;
+    border-radius: 2px;
+    margin: 1px 0px;
+}
+
+.caContent_m .allDay_event:before {
+    background-color: transparent !important;
+}
+
+.caContent_m .event.active {
+    background-color: rgba(127, 187, 226, 1);
+    color: #fff;
+}
+
+.caContent_m .event:before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 7px;
+    background-color: rgba(197, 225, 243, 1);
+    margin-right: 5px;
+}
+
+.caContent_m .event.active:before {
+    background-color: #fff;
+}
+
+/* @end */
+
+/* @end */
+
+/* @group calendar animation */
+
+.caAnimation {
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.weekCalendar,
+.monthCalendar {
+    visibility: hidden;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+    .weekCalendar .touchScroll,
+    .monthCalendar .touchScroll {
+        overflow: hidden !important;
+    }
+
+    .weekCalendar.current .touchScroll,
+    .monthCalendar.current .touchScroll {
+        overflow: scroll !important;
+    }
+
+    .weekCalendar.current,
+    .monthCalendar.current {
+        visibility: visible;
+        z-index: 1;
+    }
+
+.caFadeOut {
+    -webkit-animation-name: caFadeOut;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+
+.caMoveToLeftEasing {
+    -webkit-animation-name: caMoveToLeft;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+
+.caMoveToRightEasing {
+    -webkit-animation-name: caMoveToRight;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+
+.caMoveFromLeftEasing {
+    -webkit-animation-name: caMoveFromLeft;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+
+.caMoveFromRightEasing {
+    -webkit-animation-name: caMoveFromRight;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+
+
+
+@-webkit-keyframes caMoveToLeft {
+    to {
+        -webkit-transform: translateX(-104%);
+    }
+}
+
+@-moz-keyframes caMoveToLeft {
+    to {
+        -moz-transform: translateX(-104%);
+    }
+}
+
+@keyframes caMoveToLeft {
+    to {
+        transform: translateX(-104%);
+    }
+}
+
+@-webkit-keyframes caMoveFromLeft {
+    from {
+        -webkit-transform: translateX(-104%);
+    }
+}
+
+@-moz-keyframes caMoveFromLeft {
+    from {
+        -moz-transform: translateX(-104%);
+    }
+}
+
+@keyframes caMoveFromLeft {
+    from {
+        transform: translateX(-104%);
+    }
+}
+
+@-webkit-keyframes caMoveToRight {
+    to {
+        -webkit-transform: translateX(104%);
+    }
+}
+
+@-moz-keyframes caMoveToRight {
+    to {
+        -moz-transform: translateX(104%);
+    }
+}
+
+@keyframes caMoveToRight {
+    to {
+        transform: translateX(104%);
+    }
+}
+
+@-webkit-keyframes caMoveFromRight {
+    from {
+        -webkit-transform: translateX(104%);
+    }
+}
+
+@-moz-keyframes caMoveFromRight {
+    from {
+        -moz-transform: translateX(104%);
+    }
+}
+
+@keyframes caMoveFromRight {
+    from {
+        transform: translateX(104%);
+    }
+}
+
+/* @end */
+
+/* @end */

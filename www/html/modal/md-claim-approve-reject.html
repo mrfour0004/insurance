@@ -1,0 +1,17 @@
+﻿<div id="md-claim-approve-reject" class="fp fp-100 table pop">
+    <div>
+        <div class="pop-ctnr" style="width:350px;">
+            <h2 class="pop-h ct">拒絕原因</h2>
+            <textarea id="ipt-claim-reject-reason" class="pop-txtarea" rows="4" placeholder="請輸入拒絕原因..."></textarea>
+            <div class="btn-ctnr">
+                <button class="btn btn-shadow btn-cancel btn-closeModal btn-large">取消</button>
+                <button id="btn-send-reject" class="btn btn-shadow btn-success btn-large">確定</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $("#btn-send-reject").click(function () {
+        $("#btn-approve").trigger("click");
+    });
+</script>

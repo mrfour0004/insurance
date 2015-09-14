@@ -1,0 +1,63 @@
+﻿<div class="cals">
+    <div class="cal active">
+        <div class="pg has-aside">
+            <div class="pg-aside cal-aside">
+                <div class="cal-mini">
+                    <div class="cal-hd table">
+                        <div class="cal-d"><span>日</span></div>
+                        <div class="cal-d"><span>一</span></div>
+                        <div class="cal-d"><span>二</span></div>
+                        <div class="cal-d"><span>三</span></div>
+                        <div class="cal-d"><span>四</span></div>
+                        <div class="cal-d"><span>五</span></div>
+                        <div class="cal-d"><span>六</span></div>
+                    </div>
+                    <hr />
+                    <div class="cal-days table">
+                    </div>
+                </div>
+            </div>                  
+            <div id="cal-day-ctnr" class="pg-main no-cal-hd">
+                <div class="allDay-events">
+                    <div class="cal-events-ctnr">
+                        <div class="cal-verticle-lines">
+                            <div class="table">
+                                <div class="cal-time rt"></div>
+                                <div class="cal-verticle-line"></div>
+                            </div>
+                        </div>
+                        <div class="cal-events fp touchScroll"></div>
+                        <hr class="allDay-events-hr" />
+                    </div>
+                </div>
+                <div class="cal-events-ctnr">
+                    <div class="cal-verticle-lines">
+                        <div class="table">
+                            <div class="cal-time"></div>
+                            <div class="cal-verticle-line"></div>
+                        </div>
+                    </div>
+                    <div class="cal-events fp touchScroll">
+                        <div class="cal-horizontal-lines">
+                            <div class="table">                                
+                            </div>
+                        </div>
+                        <div id="events" class="events fp">
+
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+        <div class="event-dialogs fp">
+
+        </div>
+    </div>
+</div>
+<script>
+    $(".cal").calDay();
+    
+    $(".touchScroll").scroll(function () {
+        cal.events.dialog.close();
+    })
+</script>

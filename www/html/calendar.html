@@ -1,0 +1,66 @@
+﻿<div id="pg-calendar" class="fp">
+    <div class="pg-hd topRoundBorder">
+        <div class="pg-hd-lf">
+            <div id="btn-cal-prev" class="pg-hd-icon small fl">
+                <img alt="" src="img/icons/PNG/back.png" />
+            </div>
+            <span id="btn-cal-today" class="pg-hd-label fl">今天</span>
+            <div id="btn-cal-next" class="pg-hd-icon small fl">
+                <img alt="" src="img/icons/PNG/next.png" />
+            </div>
+        </div>
+        <div class="pg-hd-ct fp">
+            <input type="radio" id="cal-type-d" name="cal-type" class="hd-tab" value="day" /><label for="cal-type-d">日</label><input type="radio" id="cal-type-w" name="cal-type" class="hd-tab" value="week" checked /><label for="cal-type-w">週</label><input type="radio" id="cal-type-m" name="cal-type" class="hd-tab" value="month" /><label for="cal-type-m">月</label>
+        </div>
+        <span id="cal-title" class="pg-hd-title fr"></span>
+    </div>
+    <div id="cal-ctnr" class="pg-ctn">
+
+    </div>
+</div>
+
+<script>
+    cal.currentDate = Date.today();
+    $("input[name='cal-type']").change(function () {
+        var calType = $(this).val(),
+            calCtnr = $("#cal-ctnr");
+        if (calType == "day") {
+            calCtnr.load("html/calendar-d.html");
+        } else if (calType == "week") {
+            calCtnr.load("html/calendar-w.html");
+        } else {
+            calCtnr.load("html/calendar-m.html");
+        }
+    });
+
+    $("input[name='cal-type']:checked").trigger("change");
+    //$("#pg-calendar").calendar();
+
+    $("#cal-ctnr").on("click", ".event", function (e) {
+        var idx = $(this).attr("index");
+
+        cal.events.dialog.close();
+        if (!$(this).hasClass("active"))
+            cal.events.dialog.open(idx);
+        
+    });
+    $("#cal-ctnr").on("click", "> *", function (e) {
+        var t = $(e.target);
+        if (!t.hasClass("event-dialog") && !t.is(".event") && !t.parent().hasClass("event")) {
+            cal.events.dialog.close();
+        }
+    });
+    $("#btn-cal-today").click(function () {
+        console.log("llll")
+        var type = $("input[name='cal-type']:checked").val();
+        cal[type].refresh(Date.today());
+    });
+    $("#btn-cal-next").click(function () {
+        var type = $("input[name='cal-type']:checked").val();
+        cal[type].toNext();
+    });
+    $("#btn-cal-prev").click(function () {
+        var type = $("input[name='cal-type']:checked").val();
+        cal[type].toPrev();
+    });
+</script>

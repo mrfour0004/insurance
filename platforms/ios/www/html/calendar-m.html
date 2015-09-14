@@ -1,0 +1,27 @@
+﻿<div class="cals">
+    <div class="cal cal-month active">
+        <table>
+            <thead class="cal-hd">
+                <tr>
+                    <td class="cal-day"><span>週日</span></td>
+                    <td class="cal-day"><span>週一</span></td>
+                    <td class="cal-day"><span>週二</span></td>
+                    <td class="cal-day"><span>週三</span></td>
+                    <td class="cal-day"><span>週四</span></td>
+                    <td class="cal-day"><span>週五</span></td>
+                    <td class="cal-day"><span>週六</span></td>
+                </tr>
+            </thead>
+            <tbody class="cal-days"></tbody>
+        </table>
+        <div class="event-dialogs fp">
+
+        </div>
+    </div>
+</div>
+<script>
+    $(".cal").calMonth();
+    $(".touchScroll").scroll(function () {
+        cal.events.dialog.close();
+    })
+</script>

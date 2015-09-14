@@ -1,0 +1,648 @@
+﻿<input type="hidden" id="ipt_claimNo" />
+<div class="pg-hd topRoundBorder">
+    <div class="pg-hd-icon fl" onclick="view.page.toPrev()">
+        <img alt="" src="img/icons/arrow-left.png" />
+    </div>
+</div>
+<div id="pg-claim" class="pg has-aside">
+    <div class="pg-aside">
+        <div class="aside-ctn">
+            <ul class="aside-lists">
+                <li class="aside-list accordion active">
+                    <h4>賠案資訊</h4>
+                    <ul class="aside-subLists">
+                        <li class="aside-subList active" link="policy"><h4>保單訊息</h4></li>
+                        <li class="aside-subList" link="accident"><h4>事故資訊</h4></li>
+                        <li class="aside-subList" link="driver"><h4>駕駛人</h4></li>
+                        <li class="aside-subList" link="responsibility"><h4>肇責</h4></li>
+                        <!--<li class="aside-subList" link="otherInfo"><h4>其他賠案訊息</h4></li>
+                        <li class="aside-subList" link="ineterInfo"><h4>內部訊息</h4></li>-->
+                    </ul>
+                </li>
+                <li class="aside-list accordion">
+                    <h4>決陪內容</h4>
+                    <ul class="aside-subLists">
+                        <li class="aside-subList active" link="ins-01"><h4>01 車體險 財產損失</h4></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="aside-ft">
+            <div class="btn-ctnr">
+                <div class="icon-btn">
+                    <span id="btn-reject" class="icon-cancel"></span>
+                </div>
+                <div class="icon-btn">
+                    <span id="btn-approve" class="icon-success icon-check"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pg-main">
+        <div class="main-ctns fs-field">
+            <div class="main-ctn touchScroll fs-current" link="policy">
+                <div class="form-ctnr">
+                    <h3 class="form-hd">保單資訊</h3>
+                    <div class="form-ctn">
+                        <div class="form-row">
+                            <div class="form-td gd-33">
+                                <label>保單號碼</label>
+                                <input type="text" id="ipt_policyNo" disabled />
+                            </div>
+                            <div class="form-td gd-33">
+                                <label>商品</label>
+                                <input type="text" id="ipt_policy_product" disabled />
+                            </div>
+                            <div class="form-td gd-33">
+                                <label>銷售通路</label>
+                                <input type="text" id="ipt_policy_channel" disabled />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-td gd-33">
+                                <label>要保人</label>
+                                <input type="text" id="ipt_applicant" />
+                            </div>
+                            <div class="form-td gd-33">
+                                <label>電話號碼</label>
+                                <input type="tel" id="ipt_applicant_tel" />
+                            </div>
+                            <div class="form-td gd-33">
+                                <label>幣別</label>
+                                <input type="text" id="ipt_currency" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-td gd-50">
+                                <label>保單生效日</label>
+                                <input type="date" id="ipt_effective_date" />
+                            </div>
+                            <div class="form-td gd-50">
+                                <label>保單迄日</label>
+                                <input type="date" id="ipt_maturity_date" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-ctnr">
+                    <h3 class="form-hd">被保險人與保險標的物</h3>
+                    <div class="form-ctn">
+                        <div class="form-row">
+                            <div class="form-td gd-20">
+                                <label>被保險人</label>
+                                <input type="text" id="ipt_insured_name" />
+                            </div>
+                            <div class="form-td title gd-30">
+                                <label>出生日期</label>
+                                <input type="date" id="ipt_insured_birthday" />
+                            </div>
+                            <div class="form-td gd-20">
+                                <label>證件類別</label>
+                                <input type="text" id="ipt_insured_crt_type" />
+                            </div>
+                            <div class="form-td gd-30">
+                                <label>證件號碼</label>
+                                <input type="text" id="ipt_insured_crtNo" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-td title gd-20">
+                                <label>車種</label>
+                                <input type="text" id="ipt_insured_car_type" class="uppercase" />
+                            </div>
+                            <div class="form-td gd-30">
+                                <label>車牌號碼</label>
+                                <input type="text" id="ipt_insured_car_license_plate" />
+                            </div>
+                            <div class="form-td gd-20">
+                                <label>出廠年份</label>
+                                <input type="number" id="ipt_insured_car_manufacturing_date" />
+                            </div>
+                            <div class="form-td gd-30">
+                                <label>原始發照日期</label>
+                                <input type="date" id="ipt_insured_car_certificate_date" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-td title gd-20">
+                                <label>廠牌車型</label>
+                                <input type="text" id="ipt_insured_car_series" class="uppercase" />
+                            </div>
+                            <div class="form-td gd-30">
+                                <label>車身顏色</label>
+                                <input type="text" id="ipt_insured_car_color" />
+                            </div>
+                            <div class="form-td gd-20">
+                                <label>排氣量</label>
+                                <input type="number" id="ipt_insured_car_displacement" />
+                            </div>
+                            <div class="form-td gd-30">
+                                <label>平均里程數</label>
+                                <input type="text" id="ipt_insured_car_km" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-ctn touchScroll" link="accident">
+                <div class="form-ctnr">
+                    <h3 class="form-hd">事故資訊</h3>
+                    <div class="form-ctn">
+                        <div class="form-row">
+                            <div class="form-td gd-50">
+                                <label>理賠單位</label>
+                                <input type="text" id="ipt_claim_department" />
+                            </div>
+
+                            <div class="form-td">
+                                <label>出險原因</label>
+                                <input type="text" id="ipt_claim_reason" />
+                            </div>
+
+                            <div class="form-td gd-25">
+                                <label>巨災代碼</label>
+                                <select id="ipt_claim_perilNo">
+                                    <option value="1" selected>NO-0000</option>
+                                    <option value="2">NO-0001</option>
+                                    <option value="3">NO-0002</option>
+                                    <option value="4">NO-0003</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-td gd-50">
+                                <label>事故時間</label>
+                                <input type="datetime-local" id="ipt_accident_time" />
+                            </div>
+                            <div class="form-td gd-50">
+                                <label>客戶報案時間</label>
+                                <input type="datetime-local" id="ipt_report_time" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-td gd-50">
+                                <label>報案號產生時間</label>
+                                <input type="datetime-local" id="ipt_reported_time" />
+                            </div>
+                            <div class="form-td gd-50">
+                                <label>立案成立時間</label>
+                                <input type="datetime-local" id="ipt_register_time" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-td gd-25">
+                                <label>事故地區</label>
+                                <select id="ipt_accident_location_type">
+                                    <option>國道</option>
+                                    <option>縣市</option>
+                                </select>
+                            </div>
+                            <div class="form-ctn gd-75">
+                                <div class="form-ctrl-row" for="ipt_accident_location_type">
+                                    <div class="form-row vCtrl active" target="city">
+                                        <div class="form-td">
+                                            <label>縣市</label>
+                                            <input type="text" id="ipt_accident_city" />
+                                        </div>
+                                        <div class="form-td">
+                                            <label>鄉鎮</label>
+                                            <input type="text" id="ipt_accident_township" />
+                                        </div>
+                                        <div class="form-td">
+                                            <label>道路</label>
+                                            <input type="text" id="ipt_accident_road" />
+                                        </div>
+                                    </div>
+                                    <div class="form-row vCtrl" target="highway">
+                                        <div class="form-td">
+                                            <label>國道</label>
+                                            <input type="text" id="ipt_accident_highway" />
+                                        </div>
+                                        <div class="form-td">
+                                            <label>方向</label>
+                                            <input type="text" id="ipt_accident_highway_direction" />
+                                        </div>
+                                        <div class="form-td">
+                                            <label>公里</label>
+                                            <input type="text" id="ipt_accident_highway_km" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-td gd-100">
+                                <label>事故原因簡述</label>
+                                <input type="text" id="ipt_accident_description" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-ctnr">
+                    <h3 class="form-hd">報案人</h3>
+                    <div class="form-ctn">
+                        <div class="form-row">
+                            <div class="form-td gd-25">
+                                <label>報案人姓名</label>
+                                <input type="text" id="ipt_reporter" />
+                            </div>
+                            <div class="form-td gd-50">
+                                <label>報案方式</label>
+                                <select id="ipt_report_method">
+                                    <option>3. 客服/銷售人員受理(SP)</option>
+                                </select>
+                            </div>
+                            <div class="form-td gd-25">
+                                <label>受理人員姓名</label>
+                                <input type="text" id="ipt_accepter_name" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-ctnr">
+                    <h3 class="form-hd">請求權人</h3>
+                    <div class="form-ctn">
+                        <div class="form-row">
+                            <div class="form-td gd-25">
+                                <label>請求權人</label>
+                                <input type="text" id="ipt_claimant_name" />
+                            </div>
+                            <div class="form-td gd-25">
+                                <label>證件類型</label>
+                                <select id="ipt_claimant_crt_type">
+                                    <option>1. 身分證</option>
+                                </select>
+                            </div>
+                            <div class="form-td gd-50">
+                                <label>證件號碼</label>
+                                <input type="text" id="ipt_claimant_crtNo" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-td gd-50">
+                                <label>請求權人身分</label>
+                                <select id="ipt_claimant_identity">
+                                    <option>1. 自然人本國籍</option>
+                                </select>
+                            </div>
+                            <div class="form-td gd-50">
+                                <label>請求權人電話</label>
+                                <input type="tel" id="ipt_claimant_tel" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-ctn touchScroll" link="driver">
+                <div class="form-ctnr">
+                    <h3 class="form-hd">駕駛人</h3>
+                    <div class="form-ctn">
+                        <div class="form-row">
+                            <div class="form-td gd-33">
+                                <label>姓名</label>
+                                <input type="text" id="ipt_driver_name" />
+                            </div>
+                            <div class="form-td gd-33">
+                                <label>與被保人關係</label>
+                                <select id="ipt_driver_relationship">
+                                    <option value="1" selected>本人</option>
+                                    <option value="2">配偶</option>
+                                    <option value="3">父母</option>
+                                    <option value="4">子女</option>
+                                    <option value="5">兄弟姊妹</option>
+                                    <option value="6">友人</option>
+                                    <option value="7">其他</option>
+                                </select>
+                            </div>
+                            <div class="form-td gd-33">
+                                <label>本車駕駛人區別</label>
+                                <input type="text" id="ipt_driver_difference" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-td gd-33">
+                                <label>證件類別</label>
+                                <input type="text" id="ipt_driver_crt_type" />
+                            </div>
+                            <div class="form-td gd-33">
+                                <label>證件號碼</label>
+                                <input type="text" id="ipt_driver_crtNo" />
+                            </div>
+                            <div class="form-td gd-33">
+                                <label>身分代號</label>
+                                <select id="ipt_driver_identity">
+                                    <option value="1" selected>1. 自然人本國籍</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-td gd-25">
+                                <label>生日</label>
+                                <input type="date" id="ipt_driver_birthday" />
+                            </div>
+                            <div class="form-td gd-25">
+                                <label>職業</label>
+                                <input type="text" id="ipt_driver_occupation" />
+                            </div>
+                            <div class="form-td form-td-title gd-25">
+                                <label>性別</label>
+                                <select id="ipt_driver_gender">
+                                    <option>男</option>
+                                    <option>女</option>
+                                </select>
+                            </div>
+                            <div class="form-td gd-25">
+                                <label>婚姻</label>
+                                <select id="ipt_driver_marital_status">
+                                    <option>未婚</option>
+                                    <option>已婚</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-ctn touchScroll" link="responsibility">
+                <div class="form-ctnr">
+                    <h3 class="form-hd">肇責訊息</h3>
+                    <div class="form-ctn">
+                        <div class="form-row">
+                            <div class="form-td gd-100">
+                                <label>肇責代碼</label>
+                                <select id="ipt_responsibility_code">
+                                    <option>1. 有違規肇事責任，記次</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-td gd-33">
+                                <label>本車肇責比例</label>
+                                <input type="number" id="ipt_responsibility_proportion_self" />
+                            </div>
+                            <div class="form-td gd-33">
+                                <label>對方車肇責比例</label>
+                                <input type="number" id="ipt_responsibility_proportion_counterpart" />
+                            </div>
+                            <div class="form-td gd-33">
+                                <label>其他肇責比例</label>
+                                <input type="number" id="ipt_responsibility_proportion_other" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-td">
+                                <label>憲警單位處理方式</label>
+                                <select id="ipt_police_handle">
+                                    <option value="1" selected>憲警立即現場處理</option>
+                                    <option value="2">事後憲警單位備案</option>
+                                    <option value="3">無憲警單位處理</option>
+                                    <option value="4">理賠人員事故現場處理</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-td">
+                                <label>憲警單位</label>
+                                <input type="text" id="ipt_police_branch" />
+                            </div>
+                            <div class="form-td">
+                                <label>憲警單位電話</label>
+                                <input type="tel" id="ipt_police_tel" />
+                            </div>
+                            <div class="form-td">
+                                <label>處理憲警姓名</label>
+                                <input type="text" id="ipt_police_name" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-td gd-66">
+                                <label>拖吊業者</label>
+                                <input type="text" />
+                            </div>
+                            <div class="form-td gd-33">
+                                <label>拖吊業者電話</label>
+                                <input type="tel" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-ctn touchScroll" link="ins-01">
+                <div class="form-ctnr">
+                    <h3 class="form-hd">損失標的: <span id="ipt_settlement_target"></span></h3>
+                    <div class="form-ctn">
+                        <div class="form-row">
+                            <div class="form-td gd-50">
+                                <label>損失類型</label>
+                                <select id="ipt_settlement_damage_type">
+                                    <option>本車車損</option>
+                                </select>
+                            </div>
+                            <div class="form-td gd-50">
+                                <label>支付類型</label>
+                                <select id="ipt_settlement_pay_type">
+                                    <option>救護費</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-td">
+                                <label>領/付款人</label>
+                                <input type="text" id="ipt_settlement_payee" />
+                            </div>
+                            <div class="form-td">
+                                <label>領/付款人身分證號</label>
+                                <input type="text" id="ipt_settlement_payee_ID" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-td gd-25">
+                                <label>支付方式</label>
+                                <select id="ipt_settlement_pay_method">
+                                    <option>銀行支付</option>
+                                </select>
+                            </div>
+                            <div class="form-td gd-25">
+                                <label>幣種</label>
+                                <input type="text" id="ipt_settlement_currency" />
+                            </div>
+                            <div class="form-td gd-50">
+                                <label>決賠金額</label>
+                                <input type="number" id="ipt_settlement_amount" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-td gd-25">
+                                <label>金資代碼</label>
+                                <input type="text" id="ipt_settlement_moneyCode" />
+                            </div>
+                            <div class="form-td gd-25">
+                                <label>銀行分行</label>
+                                <input type="text" id="ipt_settlement_branch" />
+                            </div>
+                            <div class="form-td gd-50">
+                                <label>銀行帳號</label>
+                                <input type="number" id="ipt_settlement_account" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-td">
+                                <label>支票寄送地址</label>
+                                <input type="text" id="ipt_settlement_check_address" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var claim = {};
+    function loadPolicy(claimNo) {
+        dbobj.select(dbobj.qryStr.selectClaimByID, [claimNo], function (res) {
+            console.log("loaded claim: ", res);
+            claim = res[0];
+
+            $.each($("input[id^='ipt_']"), function () {
+                var s = $(this).attr("id").replace("ipt_", "");
+                //console.log(s, claim[s]);
+                if ($(this).attr("type") == "date") {
+                    if (claim[s] != "")
+                        $(this).val(Date.parseExact(claim[s], "yyyyMMdd").toString("yyyy-MM-dd"));
+                }
+                else
+                    $(this).val(claim[s]);
+            });
+
+            $.each($("select[id^='ipt_']"), function () {
+                var s = $(this).attr("id").replace("ipt_", "");
+                $(this).children("option[value='" + claim[s] + "']").prop("selected", true);
+            });
+
+
+        })
+    };
+
+    var fs = {
+        load: function (link) {
+            var curidx = $(".main-ctns > .main-ctn.fs-current").index();
+            var idx = $(".main-ctns > .main-ctn[link='" + link + "']").index();
+            if (curidx > idx) {
+                this.toPrev(idx);
+            } else if (curidx < idx) {
+                this.toNext(idx);
+            }
+        },
+        toNext: function (i) {
+            var curr = $(".main-ctns > .main-ctn.fs-current");
+            var next = (typeof (i) == "undefined") ? $($(".main-ctns > .main-ctn")[$(".main-ctns > .main-ctn.fs-current").index() + 1]) : $($(".main-ctns > .main-ctn")[i]);
+
+            //var field = $(".fs-field");
+            //field.addClass("fs-display-next");
+
+            curr.addClass("fs-animHidePrev").one("webkitAnimationEnd oAnimationEnd", function () {
+                $(this).removeClass("fs-current fs-animHidePrev");
+            });
+            next.addClass("fs-current fs-animShowNext").one("webkitAnimationEnd oAnimationEnd", function () {
+                $(this).removeClass("fs-animShowNext");
+            });
+        },
+        toPrev: function (i) {
+            var curr = $(".main-ctns > .main-ctn.fs-current");
+            var prev = (typeof (i) == "undefined") ? $($(".main-ctns > .main-ctn")[$(".main-ctns > .main-ctn.fs-current").index() + 1]) : $($(".main-ctns > .main-ctn")[i]);
+
+            //var field = $(".fs-field");
+            //field.addClass("fs-display-next");
+
+            curr.addClass("fs-animHideNext").one("webkitAnimationEnd oAnimationEnd", function () {
+                $(this).removeClass("fs-animHideNext fs-current");
+            });
+            prev.addClass("fs-current fs-animShowPrev").one("webkitAnimationEnd oAnimationEnd", function () {
+                $(this).removeClass("fs-animShowPrev");
+            });
+        },
+    };
+    var claimForm = {
+        accordion: {
+            show: function (t) {
+                t.addClass("active");
+            },
+            hide: function (t) {
+                t.removeClass("active");
+            }
+        },
+        ctrl: {
+            load: function (t, v) {
+                var curr = t.find(".form-row.active");
+                var target = t.find(".form-row[target='" + v + "']");
+                if (curr.attr("target") != target.attr("target")) {
+                    target.addClass("active");
+                    curr.removeClass("active");
+                }
+            }
+        },
+        getInfo: function () {
+            var info = new Object();
+            $.each($("input[id^=ipt_]"), function (i) {
+                info[$(this).attr("id").replace("ipt_", "")] = $(this).val();
+            });
+            console.log(info);
+            return info;
+        },
+        save: function () {
+
+        },
+        upload: function () {
+
+        }
+    }
+    $("#pg-claim .aside-list").click(function () {
+        if (!$(this).hasClass("active")) {
+            fs.load($(this).find("li.active").attr("link"));
+        }
+    });
+    $("#pg-claim .aside-list li[link]").click(function () {
+        if (!$(this).hasClass("active")) {
+            var t = $(this);
+            var link = t.attr("link");
+
+            t.parent().find("li.active").removeClass("active");
+            t.addClass("active");
+
+            fs.load(link);
+        }
+    });
+
+    $("#btn-approve").click(function () {
+        var info = claimForm.getInfo();
+
+        dbobj.select(dbobj.qryStr.selectClaimByID, [info.claimNo], function (res) {
+            var claim = {};
+            
+            $.each(res[0], function (k, v) {
+                console.log(k, v, info[k]);
+                claim[k] = (typeof (info[k]) == "undefined") ? v : info[k];
+            });
+
+            claim.claim_status = (parseInt(claim.claim_status) + 1).toString();
+            console.log(claim);
+
+            dbobj.update("claim", claim, { key: "claimNo", value: info.claimNo }, function () {
+                console.log(claim);
+                dbobj.update("task", { step: claim.claim_status }, { key: "claimNo", value: claim.claimNo }, function () {
+                    view.notify.alert("簽核成功", "", function () { 
+                        var steps = $(".tl-feed-ctn[claimNo='" + info.claimNo + "'] .steps");
+
+                        steps.children(".step-current + .step").addClass("step-current");
+                        $(steps.children(".step-current")[0]).removeClass("step-current");
+
+                        view.page.toPrev();
+                    });
+                })
+            });
+        });
+    });
+    $("#btn-reject").click(function () {
+        view.modal.open("md-claim-approve-reject");
+    })
+</script>
